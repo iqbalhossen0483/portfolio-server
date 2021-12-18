@@ -3,7 +3,6 @@ const mongoDb = require("./mongoDb");
 const cors = require("cors");
 const { ObjectId } = require("mongodb");
 
-
 const app = express();
 app.use(express.json());
 app.use(cors());
