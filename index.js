@@ -9,6 +9,11 @@ app.use(cors());
 const port = 5000;
 const client = mongoDb();
 
+
+app.get("/", (req, res) => {
+    res.send("porfolio server is running")
+});
+
 const run = async () => {
     try {
         await client.connect();
@@ -49,10 +54,6 @@ const run = async () => {
 };
 run().catch(console.dir);
 
-
-app.get("/", (req, res) => {
-    res.send("porfolio server is now running")
-});
 app.listen(port, () => {
     console.log("server is running")
 });
